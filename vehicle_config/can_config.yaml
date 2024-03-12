@@ -1,0 +1,20 @@
+can_type: "usb_card"   #can类型:usbcan 和can_card  暂时只有这两款CAN,后续可以添加
+can_type_for_PG: "ethcan"
+
+arg_ch0:  0
+arg_bitrate0:  250
+arg_ch1:  1
+arg_bitrate1:  250
+
+arg_dev:     "/dev/can1" 
+arg_bitrate:   125
+
+ip_local:     "127.0.0.1"     
+port_local:     5000
+ip_remote:      "192.168.100.10"
+port_remote:      5001
+
+#can类型有且只能有一个 否则程序会出现未知错误
+is_ethcan:      true   #判断CAN数据是否来自网络
+is_usb_can:   false
+is_can_card:  false

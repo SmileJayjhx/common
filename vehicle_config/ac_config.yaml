@@ -1,0 +1,9 @@
+speed_updir_flag:     true 
+speed_downdir_flag:   true
+angle_updir_flag:     true
+angle_downdir_flag:   true
+
+car_rpm_max:     2400
+
+can_send_flag:   true
+car_type:   3       ##1：如意车型  2：rebot 车型   3：如意+伺服转向

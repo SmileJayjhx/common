@@ -1,0 +1,4 @@
+#request
+LightState light_cmd
+---
+bool Response

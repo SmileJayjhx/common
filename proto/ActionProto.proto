@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message ActionReq {
+  int64 start_time = 1;
+  int64 end_time = 2;
+  int64 task_id = 3;
+  int32 robot_id = 4;
+  int32 location_x = 5;
+  int32 location_y = 6;
+  int32 location_theta = 7;
+  int32 height = 8;
+  int32 energy = 9;
+  float v = 10;
+}
+
+message ActionResp {
+  bool result = 1;
+  int64 task_id = 2;
+}

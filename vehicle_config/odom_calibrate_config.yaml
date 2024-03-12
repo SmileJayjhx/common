@@ -1,0 +1,9 @@
+# 虚拟差速轮相关参数
+wheel_track_theory_const: 1.0 # 单位:米, 轮距
+radius_virtual_left_wheel_const: 0.1 # 单位:米, 虚左轮半径
+radius_virtual_right_wheel_const: 0.1 # 单位:米, 虚右轮半径
+
+# 差分模型相关参数
+wheel_track: 1.0 # 单位:米, 轮距
+radius_virtual_left_wheel: 0.1 # 单位:米, 虚左轮半径
+radius_virtual_right_wheel: 0.1 # 单位:米, 虚右轮半径

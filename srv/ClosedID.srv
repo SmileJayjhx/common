@@ -1,0 +1,4 @@
+
+int32[] closed_id
+---
+int32[] closed_id_out

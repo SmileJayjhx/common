@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+message ApplyReq {
+  int32 robot_id = 1;
+}
+
+message ApplyResp {
+  int32 robot_id = 1;
+  int32 area_id = 2;
+  repeated Applys applys = 3;
+  bool valid = 4;
+  int32 box = 5;
+  repeated int64 boxs = 6;
+  int32 power = 7;
+  bool free = 8;
+}
+
+message Applys {
+  uint64 id = 1;
+  int32 x0 = 2;
+  int32 y0 = 3;
+  int32 x = 4;
+  int32 y = 5;
+  int32 forkHeight = 6;
+  int32 forkWidth = 7;
+  EndQrcode end_qrcode = 8;
+  float degree = 9;
+  Action action = 10;
+  int32 robotId = 11;
+  float offsetDegree = 12;
+  int32 extraForkHeightOffset = 13;
+}
+
+message Box {
+  int32 box_id = 1;
+}
+
+message EndQrcode {
+  string taskName = 1;
+  int32 type = 2;
+}
+
+message Action {
+  oneof oneof_act {
+    Action_Ahead act_ahead = 1;
+    Action_Rotation act_rotation = 2;
+  };
+}
+
+message Action_Ahead {
+  int32 distance = 1;
+  repeated Speeds speeds = 2;
+  float maxSpeed = 3;
+  string name = 4;
+  uint32 time = 5;
+}
+
+message Action_Rotation {
+ float degree = 1;
+ float fromDegree = 2;
+ int32 circleX = 3;
+ int32 circleY = 4;
+ int32 circleR = 5;
+ float maxSpeed = 6;
+ string name = 7;
+ uint32 time = 8;
+}
+
+message Speeds {
+  float fromSpeed = 1;
+  float endSpeed = 2;
+  uint32 time = 3;
+  uint32 distance = 4;
+}

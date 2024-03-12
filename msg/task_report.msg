@@ -1,0 +1,2 @@
+bool is_finished
+int64 task_id

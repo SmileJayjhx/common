@@ -1,0 +1,62 @@
+syntax = "proto3";
+package receive;
+
+message goalpos
+{
+    int32     x = 1;  
+    int32     y = 2; 
+    int32     yaw = 3;  
+}
+
+message startpos
+{
+    int32     x = 1;  
+    int32     y = 2;  
+    int32     yaw = 3;  
+}
+
+message t_action
+{
+    int32     move_name = 1;  //运动类型 直行/转弯
+    int32  action_name=2; //动作类型 pick
+    int32     height = 3; //叉齿高度
+    int32 move_type=4;//点位  
+    int32 max_speed=5;
+    int32 forkadjust_height=6;
+}
+
+message circle_center
+{
+    int32     radius = 1;  
+    int32     x = 2;   
+    int32     y = 3;   
+}
+
+message speed
+{
+    int32     fromspeed = 1;  
+    int32     endspeed = 2; 
+    int32     distance = 3;    
+}
+
+message data
+{
+repeated goalpos goalpos1 = 1;
+repeated startpos startpos1 = 2;
+int32 taskid = 3;
+int32 robot_id=4;
+int32 mode = 5;//待定
+//int32 distance=5;//待定
+repeated t_action action = 6;
+repeated circle_center circle = 7;
+int32 speed_cnt = 8;
+int32 safe_boundry=9;
+repeated speed v = 10;
+}
+
+message plan_lists
+{
+    int32 task_num = 1;
+    repeated data tasks=2;
+}
+

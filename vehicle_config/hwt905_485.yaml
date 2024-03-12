@@ -1,0 +1,8 @@
+# device_name: "/dev/imu_com_port"
+device_name: "/dev/ttyS2"
+baud_rate:  115200
+timeout_usec:  10
+imu_install_x:  1
+imu_install_y:  2
+imu_install_z:  3
+

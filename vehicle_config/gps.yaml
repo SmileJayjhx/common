@@ -1,0 +1,6 @@
+device_name: "/dev/gps_com_port"
+
+baud_rate:  115200
+timeout_usec:  70000
+
+

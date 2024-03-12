@@ -1,0 +1,3 @@
+geometry_msgs/Pose2D startpoint
+geometry_msgs/Pose2D endpoint
+geometry_msgs/Twist startvel

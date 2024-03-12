@@ -1,0 +1,30 @@
+syntax = "proto3";
+package report_robot_state;
+
+
+
+message location
+{
+  int32 report_location_x = 1;
+  int32 report_location_y = 2;
+  int32 report_location_theta = 3;
+}
+
+message report_data
+{
+  int32 report_robot_id = 1;
+  int32 report_height = 2;
+  int32 report_energy = 3;
+  int32 report_v = 4;
+  int64 report_task_id = 5;
+  int32 report_start_time = 6;
+  int32 report_end_time = 7;
+  bool report_taskfinish = 8;
+  int32 report_error=9;
+  int32 report_manual_flag=10;
+  repeated location report_location_data = 11;
+}
+message test
+{
+  repeated report_data test_11=1;
+}

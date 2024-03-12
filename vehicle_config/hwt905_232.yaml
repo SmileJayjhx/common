@@ -1,0 +1,9 @@
+
+device_name: "/dev/imu_com_port"
+
+baud_rate:  460800
+timeout_usec:  10
+imu_install_x:  1
+imu_install_y:  2
+imu_install_z:  3
+
